@@ -2,13 +2,13 @@ import pyautogui, time
 
 time.sleep(2)#give time to close out of program
 
-#stop CNC milling 
+#Stop CNC milling 
 def Abort():
     cord = pyautogui.locateCenterOnScreen('Abort.png')
     time.sleep(2)#giving time to find on screen before clicking
     pyautogui.click(cord)
 
-#pause CNC milling
+#Pause CNC milling
 def Pause():
     cord = pyautogui.locateCenterOnScreen('Pause.png')
     time.sleep(2)#giving time to find on screen before clicking
