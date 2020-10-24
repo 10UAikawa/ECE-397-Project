@@ -42,7 +42,12 @@ def MyServoOpen(ServoNum):
     for i in range(180,0,-1):
         board.digital[ServoNum].write(i)
         time.sleep(0.01)  #the speed of the servo .01 seconds is a good speed
-    
+        
+#sends a command as a string, give the pixel location in x,y coordinates (can change default value of num_clicks is want to click more than once)      
+def Send_Command(x,y,num_click=1,command)
+    #x, y coordiantes can be changed as need depending on monitor
+    pyautogui.click(x,y,num_click,0,"left")
+    pyautogui.typewrite(command,0)
     
 
 board = ArduinoMega('COM7')  #ArduinoMega connecting to computers COM port
