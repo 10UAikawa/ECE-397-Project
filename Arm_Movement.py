@@ -1,4 +1,4 @@
-import arm
+import Arm_Class
 import time
 import sys
 
